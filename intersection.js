@@ -38,17 +38,37 @@ const intersection = (a, b) => {
 // Charlie's solution incorporating sets
 
 
+// const intersectionStructy = (a, b) => {
+//     const result = [];
+//     const items = new Set();
+
+//     for (let val of a) {
+//         items.add(val);
+//     }
+    
+//     for (let val of b) {
+//         if (items.has(val)) {
+//             result.push(val);
+//         }
+//     }
+
+//     return result;
+
+// }
+
+// Structy solution
+
 const intersectionStructy = (a, b) => {
     const result = [];
     const items = new Set();
 
-    for (let val of a) {
-        items.add(val);
+    for (let item of a) {
+        items.add(item);
     }
-    
-    for (let val of b) {
-        if (items.has(val)) {
-            result.push(val);
+
+    for (let element of b) {
+        if (items.include(element)) {
+            result.push(element);
         }
     }
 
@@ -58,7 +78,6 @@ const intersectionStructy = (a, b) => {
 
 console.log(intersectionStructy([4,2,1,6], [3,6,9,2,10]))
 
-// Structy solution
 
 
 // JS sets demo
