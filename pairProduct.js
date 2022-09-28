@@ -1,0 +1,5 @@
+const pairProduct = (nums, target) => {
+
+
+    
+}
