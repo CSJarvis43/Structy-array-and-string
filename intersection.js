@@ -33,5 +33,41 @@ const intersection = (a, b) => {
     return result;
 }
 
-console.log(intersection([4,2,1,6], [3,6,9,2,10]))
+// console.log(intersection([4,2,1,6], [3,6,9,2,10]))
 
+// Charlie's solution incorporating sets
+
+
+const intersectionStructy = (a, b) => {
+    const result = [];
+    const items = new Set();
+
+    for (let val of a) {
+        items.add(val);
+    }
+    
+    for (let val of b) {
+        if (items.has(val)) {
+            result.push(val);
+        }
+    }
+
+    return result;
+
+}
+
+console.log(intersectionStructy([4,2,1,6], [3,6,9,2,10]))
+
+// Structy solution
+
+
+// JS sets demo
+
+// const mySet = new Set();
+// mySet.add(3);
+// mySet.add(5);
+// mySet.add(3);
+
+// console.log(mySet);
+// console.log(mySet.has(3));
+// console.log(mySet.has(12));
