@@ -15,3 +15,20 @@ function pairSum(numbers, targetSum) {
 }
 
 console.log(pairSum([4, 7, 9, 2, 5, 1], 3))
+
+// Structy solution
+
+const pairSumStructy = (numbers, targetSum) => {
+    const previousNums = {};
+
+    for (let i = 0; i < numbers.length; i++) {
+        const num = numbers[i];
+        const complement = targetSum - num;
+
+        if (complement in previousNums) {
+            return [i, previousNums[complement]];
+        }
+        
+        previousNums[num] = i;
+    }
+}
